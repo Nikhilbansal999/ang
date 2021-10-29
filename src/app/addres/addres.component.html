@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <br><br><br>
+
+  <section class="section">
+    <div id="address">
+        
+      <form class="signup-form" [formGroup]="form" (ngSubmit)="on(name,address,city,state,pincode)">
+
+        <h1 class="signup-heading">Address</h1>
+       
+        <span>Name </span>
+        <div class="field -username">
+            <input  type="text" placeholder="Type Your Name" formControlName="name"  />
+        </div>
+
+        <br><br>
+
+        <span>Address </span>
+        <div class="field -username">
+            <input  type="text" placeholder="Type Your Address"  formControlName="address"  />
+        </div>
+
+         <br><br>
+
+        <span>City </span>
+        <div class="field -password">
+          <input  placeholder="Type Your password" formControlName="city"   type="text"/>
+        </div>
+
+        <br><br>
+
+        <span>state</span>
+        <div class="field -password">
+          <input placeholder="Type your state"  formControlName="state" type="text"/>
+        </div>
+
+        <br><br>
+
+        <span>Pincode </span>
+        <div class="field -username">
+            <input type="number"  style="font-size: small;" formControlName="pincode" placeholder="Type Your Pincoder" />
+        </div>
+        <br>
+        <button class="signup-button"  type="submit">Place your order order</button>
+      </form>
+    </div>
+  </section>
+  <br><br><br>
+</body>
+</html>

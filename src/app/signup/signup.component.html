@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <br><br><br>
+
+  <section class="section">
+    <div id="signup">
+        
+      <form class="signup-form" [formGroup]="form" (ngSubmit)="onSubmit(name,email,password,password1,mobile)">
+
+        <h1 class="signup-heading">Sign Up</h1>
+        <p class="signup-copy">Welcome Folks, to the Jaipur's best Electronic market place</p>
+        <span>Name </span>
+        <div class="field -username">
+            <input  type="email" placeholder="Type Your Name" formControlName="name"  name="demo" />
+            <br>
+            <div *ngIf="name.touched && name.invalid">
+              <div  *ngIf="name.errors.required">**name is Required</div>
+              <div  *ngIf="name.errors.minlength">**name should be minimum 3character</div>
+              <div *ngIf="name.errors.pattern">**first letter should not be  space and specials are not allowd</div>
+              <div *ngIf="name.errors.condition" >**username is not admin</div>        
+            </div>
+        </div>
+
+        <br><br>
+
+        <span>E-mail </span>
+        <div class="field -username">
+            <input  type="email" placeholder="Type Your E-mail" formControlName="email" name="demo" />
+            <br>
+            <div  *ngIf="email.touched && email.invalid &&!email.required ">
+              <div  *ngIf="email.errors.required">**email is Required</div>
+          </div>
+        </div>
+         <br><br>
+
+        <span>Password </span>
+        <div class="field -password">
+          <input  placeholder="Type Your password" formControlName="password"  type="password" name="demo"/>
+          <br>
+          <div *ngIf="password.touched && password.invalid &&!password.required ">**password is required
+            <div  *ngIf='password.required'>**password is required</div>
+        </div>
+        </div>
+
+        <br><br>
+
+        <span>Confirm Password </span>
+        <div class="field -password">
+          <input placeholder="Re-type Your password" [class.is-invalid]="form.errors?.Password"  type="password" name="password1"  appCustom  formControlName="password1" type="password" name="demo"/>
+          <br>
+          <div *ngIf="password1.touched && password1.invalid &&!password1.required ">
+            <div  *ngIf="password1.errors.required">**password is required</div>
+      
+          </div>
+        </div>
+
+        <br><br>
+
+        <span>Phone Number </span>
+        <div class="field -username">
+            <input type="number"  style="font-size: small;" formControlName="mobile" placeholder="Type Your Phone Number" name="demo" />
+            <br>
+            <div  *ngIf="mobile.touched && mobile.invalid &&!mobile.required ">**Mobile Number is required</div>
+        </div>
+        <br>
+        <button class="signup-button"  type="submit">Signup</button>
+      </form>
+    </div>
+  </section>
+  <br><br><br>
+</body>
+</html>
