@@ -1,0 +1,56 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+        </head>
+        <body>
+          <br><br><br>
+       
+         
+          <section class="section">
+            <br>
+
+            <h1 class="signup-heading">Sell Your product</h1>
+<br>
+             <img class="img" [src]="url">
+          <input type='file' class="inp"  accept="image/png image/jpeg image/jpg"  (change)="readUrl($event)">
+            <div id="signup">
+                
+              <form class="signup-form" [formGroup]="form" (ngSubmit)="on(name,price,mobile)">
+              
+                <br><br>
+                <span>Product Name </span>
+                <div class="field -username">
+                    <input  type="email" placeholder="Product Name" formControlName="name"  name="demo" />
+                    <br>
+                    <div  *ngIf="name.touched && name.invalid &&!name.required " >title is required</div>
+                </div>
+        
+                <br><br>
+        
+                <span>Price </span>
+                <div class="field -username">
+                    <input  type="number" placeholder="Price" formControlName="price"  name="demo" />
+                    <br>
+                    <div  *ngIf="price.touched && price.invalid &&!price.required " >Price is required</div>
+                </div>
+                 <br><br>
+        
+                <span>Category </span>
+                <div class="field -password">
+                  <input  placeholder="Category" formControlName="mobile"   type="text" name="demo"/>
+                  <br>
+                  <div  *ngIf="mobile.touched && mobile.invalid &&!mobile.required " >Category is required</div>
+                </div>
+    
+                <br><br>
+                <button class="signup-button" type="submit">Sell</button>
+              </form>
+            </div>
+          </section>
+          <br><br><br>
+        </body>
+        </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Users</h2>
+  <div class="table-responsive">          
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of userData">
+        <td>{{x.name}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.contact}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+<br><br>
+<div class="container">
+  <h2>Purchased Item</h2>
+  <div class="table-responsive">          
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Purchased By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of purchasedData">
+        <td>{{x.item}}</td>
+        <td>{{x.counter}}</td>
+        <td>{{x.price }}</td>
+        <td>{{x.category}}</td>
+        <td>{{x.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div><br><br>
+<div class="container">
+  <h2>Sold Item</h2>
+  <div class="table-responsive">          
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Sold By</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of soldData">
+        <td>{{x.title}}</td>
+        <td>{{x.price }}</td>
+        <td>{{x.category}}</td>
+        <td>{{x.pehchan}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</body>
+</html>

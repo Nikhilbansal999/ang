@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="section">
+    <div class="sec1" *ngFor="let Data of cartItem" >
+      <h2>{{Data.item}}</h2>
+      <br>
+      <h4 >{{Data.category}}</h4>
+      <br>
+      <h4>Price : {{Data.price}}</h4>
+      <br>
+      <p style="color: black">Quantity : {{Data.counter}}</p>
+      <br>
+      <button class="delete" (click)="deleteItem(Data)">delete</button>
+  </div>
+</section>
+<br><br>
+<br><br>
+<section class="section1">
+  <div class="sec2">
+    <p>total price:</p>  
+    <span > {{sum}}</span>
+  <br>    
+  <button class="log-in-button" value="login" type="submit" (click)="Go()">Buy Now</button>
+  </div>
+</section>
+</body>
+</html>

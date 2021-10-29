@@ -1,0 +1,111 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+<header>
+  <img src="assets\images\Group 1.png" alt="" class="logo">
+  <ul class="nav_link">
+
+      <li><a (click)="home()" routerLinkActive="active">Home</a></li>
+      <li><a routerLink='sellit' routerLinkActive="active">Sell</a></li>
+      <li><a routerLink='order' routerLinkActive="active">Orders</a></li>
+      <li><a routerLink='account' routerLinkActive="active">Account</a></li>
+      <li><a routerLink='admin' *ngIf="!z"  routerLinkActive="active">Admin</a></li>
+  </ul>
+  <!-- <input type="text" name="" placeholder="Search in products" class="search"> -->
+  <ul class="nav_rightlink">
+      <li><a (click)="cart()">cart</a></li>
+      <li><a routerLink="login" *ngIf='!y' routerLinkActive="active" >Login/Signup</a></li>
+
+      <li><a  (click)="delete()" *ngIf='y' >Logout</a></li>
+  </ul>
+</header>
+<!-- --------------------------------------------------------- -->
+<header class="header2">
+      <ul class="nav_link">
+          <li><a (click)="Go()" id="dropdownMenuLink">Mobiles</a></li>
+          <li><a (click)="laptop()" id="dropdownMenuLink">Laptop</a></li>
+          <li><a (click)="dslr()" id="dropdownMenuLink">DSLR</a></li>
+          <li><a (click)="accessories()" id="dropdownMenuLink">Accessories</a></li>
+          <li><a (click)="drone()" id="dropdownMenuLink">Drones</a></li>
+          <li><a (click)="tv()" id="dropdownMenuLink">Television</a></li>
+          <li><a (click)="action()" id="dropdownMenuLink">Action Cam</a></li>
+      </ul>
+  </header>
+
+<router-outlet></router-outlet>
+<footer class="sec6">
+  <img src="assets\images\picture30.JPG" alt="" class="picture30">
+  <div class="text4">
+      <img src="assets\images\picture31.JPG" alt="" class="picture31">
+      <div class="it">
+          <p>Mobster, 16 A kundan Nagar jaipur Rajasthan &nbsp; </p>
+      </div>
+
+      <div class="text5">
+          <img src="assets\images\picture35.JPG" alt="" class="picture35">
+          <div class="it">
+              <p>8619074467</p>
+          </div>
+      </div>
+ <div class="text6">
+  <img src="assets\images\picture36.JPG" alt="" class="picture36">
+  <div class="it">
+ <p> nikhil.saroj.bansal@gmail.com</p>
+  </div>
+ </div>
+</div>
+<br>
+<hr>
+
+<br><br>
+<div class="lists">
+
+<div class="l1">
+  <span>Products</span>
+  <ul class="links">
+      <li><a (click)="laptop()">Laptop</a></li>
+      <li><a (click)="Go()">Mobiles</a></li>
+      <li><a (click)="tv()">Television</a></li>
+
+  </ul>
+</div>
+<div class="l1">
+  <span>Products</span>
+  <ul class="links">
+      <li><a (click)="accessories()">Accessories</a></li>
+      <li><a (click)="drone()">Drones</a></li>
+      <li><a (click)="dslr()">Camera</a></li>
+
+  </ul>
+</div>
+<div class="l1">
+  <span>More</span>
+  <ul class="links">
+      <li><a (click)="drone()">want to work?</a></li>
+      <li><a (click)="drone()">Any questions</a></li>
+      <li><a (click)="about()">About</a></li>
+  </ul>
+</div>
+<div class="l1">
+  <span>Connect Us</span>
+  <ul class="links">
+      <li><a >Facebook</a></li>
+      <li><a >Instagram</a></li>
+      <li><a >Twitter</a></li>
+      <li><a >Youtube</a></li>
+  </ul>
+</div>
+
+
+</div>
+</footer>

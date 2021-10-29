@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <br><br><br>
+  <section class="section">
+    <div class="login">
+      <form class="login-form" [formGroup]="admin" (ngSubmit)="onAdmin(name,password)">
+        <h1 class="login-heading">Admin login page</h1>
+        <br>
+        <span>E-mail </span>
+        <div class="field -username">
+            <input type="email" formControlName="name" placeholder="Type Your  E-mail" name="demo" />
+             <br>
+           <div *ngIf="name.touched && name.invalid">
+               <div class="error" *ngIf="name.errors.required">**E-mail is Required</div>
+               <div class="error" *ngIf="name.errors.minlength">**name should be minimum 3character</div>
+               <div class="error" *ngIf="name.errors.pattern">**first letter can't be space & specials not allowed</div>
+           </div>
+        </div>
+
+        <br><br>
+
+        <span>Password </span>
+        <div class="field -password">
+            <input placeholder="Type Your password" formControlName="password"  type="password" name="demo" appCustom />
+            <br>
+            <div class="error" *ngIf="password.touched && password.invalid &&password.required ">**password is required </div>
+        </div>
+        <br>
+        <button class="log-in-button" value="login" type="submit">Sign in</button>
+      </form>
+    </div>
+  </section>
+<br><br><br>
+</body>
+</html>

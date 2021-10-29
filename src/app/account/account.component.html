@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <br>
+  <section class="section">
+    <div class="sec1">
+      <span class="glyphicon glyphicon-user" style="font-size:100px;" ></span>
+<p>{{userDetailing.name}}</p>
+<p>{{userDetailing.email}}</p><br>
+<p>{{userDetailing.contact}}</p>
+<br><br>
+</div>
+<!-- <div class="sec2" *ngFor="let x of ad">
+  <span>{{x.address}}</span> <br>
+  <span>{{x.city}}</span>  <br>
+  <span>{{x.state}}</span>  <br>
+  <span>{{x.pincode}}</span>
+</div> -->
+</section>
+  <!-- <section class="section1">
+
+  </section>
+   -->
+  <section class="section2">
+    <div class="login">
+      <form class="login-form" [formGroup]="form" (ngSubmit)="on(name,contact)">
+        <h1 class="login-heading">Update You details</h1>
+        <br>
+        <span>Name </span>
+        <div class="field -username">
+            <input type="email" formControlName="name"  placeholder="Name" name="demo" />
+        </div>
+
+        <br><br>
+
+        <span>Contact </span>
+        <div class="field -password">
+            <input placeholder="Contact" formControlName="contact" type="text" name="demo" />
+        </div>
+        <br>
+        <button class="log-in-button" value="login" type="submit">Update</button>
+      </form>
+    </div>
+  </section>
+
+<br><br>
+  <section class="section4">
+    <div class="sec4">
+      <h2>Sold Items</h2>
+      <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Price</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of finalData">
+          <td>{{list.title}}</td>
+          <td>{{list.price}}</td>
+          <td><a style="background-color:none" (click)="deleting(list)"><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+      </tbody>
+      </table>
+      </div>
+  </section>
+</body>
+</html>

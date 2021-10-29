@@ -1,0 +1,101 @@
+ 
+ .section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ .sec1{
+     padding:25px;
+     text-align: center;
+     width:30%;
+     margin: 15px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   background-color: rgba(255, 255, 255, 0.364);
+   border-radius: 10px;
+   -webkit-transition: all 200ms ease-in;
+   -webkit-transform: scale(1); 
+   transform: scale(1);  
+   -ms-transition: all 200ms ease-in;
+   -ms-transform: scale(1); 
+   -moz-transition: all 200ms ease-in;
+   -moz-transform: scale(1);
+   transition: all 200ms ease-in;
+   padding-bottom:0px;
+   /* border:1px solid grey; */
+ }
+ .sec1:hover{
+   -webkit-transition: all 200ms ease-in;
+   -webkit-transform: scale(1.1);
+   -ms-transition: all 200ms ease-in;
+   -ms-transform: scale(1.1);   
+   -moz-transition: all 200ms ease-in;
+   -moz-transform: scale(1);
+   transition: all 200ms ease-in;
+   transform: scale(1.1);
+}
+.section1 {
+    display: flex;
+    padding:10px 10px;
+    justify-content: center;
+}
+.delete{
+    margin-bottom: 25px;
+    padding:10px 50px;
+    margin: auto;
+    height: 54px;
+    width: 50%;
+    background: #5959b5;
+    border: 1px solid #1a1a88;
+    border-top-color: transparent;
+    border-radius: 53px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -1px -1px rgba(37, 25, 25, 0.1);
+    -webkit-transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+.delete :hover {
+    background: #0e0e52;
+    cursor: pointer;
+  }
+
+button {
+    display: block;
+    height: 54px;
+    width: 100%;
+    background: #424294;
+    border: 1px solid #0e0e52;
+    border-radius: 53px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.1);
+    -webkit-transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+    button:hover {
+    background: #0e0e52;
+    cursor: pointer;
+  }
+  .sec2{
+        padding:25px;
+        text-align: center;
+        width:30%;
+        margin: 15px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: rgba(255, 255, 255, 0.364);
+      border-radius: 10px;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1); 
+      transform: scale(1);  
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1); 
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      padding-bottom:0px;
+      /* border:1px solid grey; */
+    }
+  
