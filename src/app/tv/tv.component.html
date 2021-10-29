@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+
+        <ng-template #loaded id="product">
+            <div class="container" >
+                  <div class="single" *ngFor="let Data of finalData">
+                    <img class="img" src="{{Data.image}}">
+                     <br>
+                    <h2>{{Data.item}}</h2>
+                    <h3>{{Data.price}} <small>INR</small> </h3> 
+                    <br>
+                    <!-- <button class="btn btn-primary" (click)="revCounting(Data)">-</button> -->
+                    <!-- <span>{{Data.counter}}</span> -->
+                    <button (click)="counting(Data)" class="btn">Add to Cart</button>
+                  </div>
+              </div>
+        </ng-template>
+ 
+
+
+      <div *ngIf="loading else loaded" style="margin:200px 10px 10px 50px">
+          <div class="bubblingG">
+              <span id="bubblingG_1">
+              </span>
+              <span id="bubblingG_2">
+              </span>
+              <span id="bubblingG_3">
+              </span>
+            </div>
+      </div>
+    
+<!-- --------------------------------------------------------- -->
+</body>
+</html>
